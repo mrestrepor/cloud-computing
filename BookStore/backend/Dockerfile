@@ -1,18 +1,19 @@
-# Base image
-FROM node:alpine
+FROM node:14-alpine
 
-# Set working directory
+# Establecer el directorio de trabajo en el contenedor
 WORKDIR /app
 
-# Install dependencies
-COPY package*.json ./
+# Copiar el archivo package.json al contenedor
+COPY package.json .
+
+# Instalar las dependencias
 RUN npm install
 
-# Copy project files
+# Copiar el resto del código al contenedor
 COPY . .
 
-# Expose port (if your server listens on a specific port)
+# Exponer el puerto 3000
 EXPOSE 3000
 
-# Start the server
-CMD ["node", "server.js"]
+# Comando para ejecutar la aplicación
+CMD ["npm", "start"]

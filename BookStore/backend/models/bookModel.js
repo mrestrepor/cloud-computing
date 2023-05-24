@@ -1,9 +1,10 @@
 import dynamodb from '../config/db.js';
+import { v4 } from 'uuid';
 
 // Define the BookModel
 class BookModel {
   constructor({ id, name, image, author, description, countInStock, price }) {
-    this.id = id || uuidv4();
+    this.id = id || v4();
     this.name = name;
     this.image = image;
     this.author = author;
