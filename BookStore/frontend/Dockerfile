@@ -20,4 +20,4 @@ RUN npm run build
 EXPOSE 3000
 
 # Set the command to run when the container starts
-CMD [ "npm", "start" ]
+CMD [ "npm", "start", "--disable-host-check" ]
