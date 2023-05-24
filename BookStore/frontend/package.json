@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "proxy": "http://127.0.0.1:5000",
+  "proxy": "internal-lb-backend-2112419838.us-east-1.elb.amazonaws.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
