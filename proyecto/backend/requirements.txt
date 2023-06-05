@@ -1,0 +1,7 @@
+Flask==2.3.2
+jsonify==0.5
+Flask-RESTful==0.3.10
+openai==0.27.7
+boto3==1.26.143
+flask-dynamo==0.1.2
+Flask-Cors==3.0.10

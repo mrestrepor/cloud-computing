@@ -1,0 +1,67 @@
+<form class="form" autocomplete="off" (ngSubmit)="onSubmit()">
+    <div class="control">
+      <h1>Register</h1>
+    </div>
+    <div class="control block-cube block-input">
+      <input
+        name="username"
+        type="text"
+        placeholder="Username"
+        [(ngModel)]="registerForm.username"
+        required
+      />
+      <div class="bg-top"></div>
+      <div class="bg-inner"></div>
+      <div class="bg-right"></div>
+      <div class="bg-inner"></div>
+      <div class="bg">
+        <div class="bg-inner"></div>
+      </div>
+    </div>
+    <div class="control block-cube block-input">
+      <input
+        name="password"
+        type="password"
+        placeholder="Password"
+        [(ngModel)]="registerForm.password"
+        required
+      />
+      <div class="bg-top"></div>
+      <div class="bg-inner"></div>
+      <div class="bg-right"></div>
+      <div class="bg-inner"></div>
+      <div class="bg">
+        <div class="bg-inner"></div>
+      </div>
+    </div>
+    <div class="control block-cube block-input">
+      <input
+        name="repeatPassword"
+        type="password"
+        placeholder="Repeat Password"
+        [(ngModel)]="registerForm.repeatPassword"
+        required
+      />
+      <div class="bg-top"></div>
+      <div class="bg-inner"></div>
+      <div class="bg-right"></div>
+      <div class="bg-inner"></div>
+      <div class="bg">
+        <div class="bg-inner"></div>
+      </div>
+    </div>
+    <button class="btn block-cube block-cube-hover" type="submit" [disabled]="registerForm.password !== registerForm.repeatPassword">
+      <div class="bg-top"></div>
+      <div class="bg-inner"></div>
+      <div class="bg-right"></div>
+      <div class="bg-inner"></div>
+      <div class="bg">
+        <div class="bg-inner"></div>
+      </div>
+      <div class="text">Register</div>
+    </button>
+    <div class="validation-message" *ngIf="registerForm.password !== registerForm.repeatPassword">
+        Passwords do not match
+      </div>
+  </form>
+  

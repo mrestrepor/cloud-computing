@@ -1,0 +1,63 @@
+<form class="form" autocomplete="off" (ngSubmit)="onSubmit(loginForm)">
+  <div class="control">
+    <h1>Sign In</h1>
+  </div>
+  <div class="control block-cube block-input">
+    <input
+      name="username"
+      type="text"
+      placeholder="Username"
+      [(ngModel)]="loginForm.username"
+      required
+    />
+    <div class="bg-top"></div>
+    <div class="bg-inner"></div>
+    <div class="bg-right"></div>
+    <div class="bg-inner"></div>
+    <div class="bg">
+      <div class="bg-inner"></div>
+    </div>
+  </div>
+  <div class="control block-cube block-input">
+    <input
+      name="password"
+      type="password"
+      placeholder="Password"
+      [(ngModel)]="loginForm.password"
+      required
+    />
+    <div class="bg-top"></div>
+    <div class="bg-inner"></div>
+    <div class="bg-right"></div>
+    <div class="bg-inner"></div>
+    <div class="bg">
+      <div class="bg-inner"></div>
+    </div>
+  </div>
+  <div class="button-container">
+    <button class="btn block-cube block-cube-hover" type="submit">
+      <div class="bg-top"></div>
+      <div class="bg-inner"></div>
+      <div class="bg-right"></div>
+      <div class="bg-inner"></div>
+      <div class="bg">
+        <div class="bg-inner"></div>
+      </div>
+      <div class="text">Log In</div>
+    </button>
+    <button
+      class="btn block-cube block-cube-hover"
+      type="button"
+      (click)="navigateToRegister()"
+    >
+      <div class="bg-top"></div>
+      <div class="bg-inner"></div>
+      <div class="bg-right"></div>
+      <div class="bg-inner"></div>
+      <div class="bg">
+        <div class="bg-inner"></div>
+      </div>
+      <div class="text">Register</div>
+    </button>
+  </div>
+</form>

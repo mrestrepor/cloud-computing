@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="login-button-container">
+    <button class="login-button" (click)="goToLogin()">Login</button>
+  </div>
+  <div class="message-box">
+    <div class="input-container">
+      <input
+        type="text"
+        [(ngModel)]="newMessage"
+        placeholder="Enter a message"
+        (keyup.enter)="sendMessage()"
+      />
+      <button (click)="sendMessage()">Send</button>
+    </div>
+  </div>
+</div>
+<app-gallery [urls]="imageUrls"></app-gallery>
